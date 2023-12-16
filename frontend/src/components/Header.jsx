@@ -7,7 +7,9 @@ import { logout, reset } from '../features/auth/authSlice'
 
 const Header = () => {
 
-  const {user}=useSelector((state)=>state.auth)
+  // const {user}=useSelector((state)=>state.auth)
+  const userString = localStorage.getItem('user')
+  const user = JSON.parse(userString);
   const dispatch=useDispatch()
   const navigate=useNavigate()
   
@@ -15,7 +17,7 @@ const Header = () => {
   const onLogOut=()=>{
     dispatch(logout())
     dispatch(reset())
-    navigate('/')
+    navigate('/login')
   }
   return (
   <>

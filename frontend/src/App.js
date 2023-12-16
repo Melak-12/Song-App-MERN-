@@ -11,15 +11,15 @@ import { login, register ,lcoalReducer} from './features/auth/authSlice';
 import { useDispatch } from 'react-redux';
 
 function App() {
-  const distpatch=useDispatch()
-  useEffect(()=>{
-    const {name,email}=localStorage.getItem('user')
-    if(name){
+  // const distpatch=useDispatch()
+  // useEffect(()=>{
+  //   const {name,email}=localStorage.getItem('user')
+  //   if(name){
 
-      const userData={name, email}
-      distpatch(lcoalReducer(userData))
-    }
-  },[])
+  //     const userData={name, email}
+  //     distpatch(lcoalReducer(userData))
+  //   }
+  // },[])
 
   return (<>
   

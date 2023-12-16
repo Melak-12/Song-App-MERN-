@@ -4,7 +4,7 @@ const dotenv =require('dotenv').config();
 const colors =require('colors')
 const connectDB=require('./config/db')
 const port = process.env.PORT || 5000
-const {errorHandler}=require('./middleware/errorMiddleware')
+// const {errorHandler}=require('./middleware/errorMiddleware')
 //insert cores
 const cors=require('cors')
 connectDB();
@@ -36,13 +36,13 @@ else{
 //try to accept client on other
 
 app.use(cors(
-  /*  {
-    origin:["http://localhost:3000","https://frontend-qu8k.onrender.com"]
-}*/
+   {
+    origin:["http://localhost:3001"]
+}
 ))
 //
 
 
 console.log("ready for frontend")
-app.use(errorHandler)
+// app.use(errorHandler)
 app.listen(port,()=>console.log(`server started at port ${port}`.bgGreen.white))

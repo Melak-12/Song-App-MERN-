@@ -22,6 +22,7 @@ const setSong= asyncHandler(async(req,res)=>{
         throw new Error('please add artist filed')
 
     }
+    console.log(req.body,"req .body")
     const songs = await Song.create({
         song:req.body.artist,
         album:req.body.album,

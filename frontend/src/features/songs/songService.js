@@ -12,7 +12,7 @@ const createSong=async(songData,token)=>{
         }
     }
     console.log("song data to databse",songData)
-
+    console.warn("user",config)
     const response=await axios.post(API_URL,songData,config)
         console.log("respose is",response.data)
     return response.data
