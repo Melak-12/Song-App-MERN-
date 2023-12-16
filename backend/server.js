@@ -34,7 +34,11 @@ else{
 
 */
 //try to accept client on other
-
+app.get('/' , (req , res)=>{
+    
+    res.send('welcome to song app  :)')
+ 
+ })
 app.use(cors(
    {
     origin:["http://localhost:3001"]
