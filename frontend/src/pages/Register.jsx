@@ -75,13 +75,15 @@ const Register = () => {
             name='name'
             value={name}
             placeholder='Enter your name '
-            onChange={onChange}/>
+            onChange={onChange}
+            required/>
         </div>
         <div className="form-group">
           <input 
             type="email" 
             className='form-control' 
             id='email'
+            required
             name='email'
             value={email}
             placeholder='Enter your Email '
@@ -95,7 +97,8 @@ const Register = () => {
             name='password'
             value={password}
             placeholder='Enter your password '
-            onChange={onChange}/>
+            onChange={onChange}
+            required/>
         </div>
         <div className="form-group">
           <input 
@@ -105,7 +108,9 @@ const Register = () => {
             name='password2'
             value={password2}
             placeholder='confirm password'
-            onChange={onChange}/>
+            onChange={onChange}
+            required
+            />
         </div>
         <div className="form-group">
           <button className='btn btn-block'type='submit '>Submit</button>

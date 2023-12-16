@@ -38,9 +38,9 @@ const SongForm = () => {
   <section className="form" style={{display:openForm?"":"none"}}>
       <form action="" onSubmit={onSubmit}>
         <div className="form-group">
-          <label htmlFor="text">Song</label>
+          <label htmlFor="text">Song Name</label>
           <input type="text" name="song" id="text" 
-          placeholder="Add your Song"
+          placeholder="dj khalid "
            value={text}
           onChange={(e)=>setText(e.target.value)}/>
           
@@ -56,7 +56,7 @@ const SongForm = () => {
         <div className="form-group">
           <label htmlFor="duration">Duration</label>
           <input type="text" name="duration" id="duration" 
-          placeholder="Add dutation"
+          placeholder="3:00"
            value={duration}
           onChange={(e)=>setDuration(e.target.value)}/>
           
@@ -64,7 +64,7 @@ const SongForm = () => {
         <div className="form-group">
           <label htmlFor="year">Year</label>
           <input type="number" name="year" id="year" 
-          placeholder="Add realise year of Song"
+          placeholder="2019"
            value={year}
           onChange={(e)=>setYear(e.target.value)}/>
           
@@ -74,7 +74,8 @@ const SongForm = () => {
           <input type="text" name="link" id="link" 
           placeholder="Add  link of Song"
            value={links}
-          onChange={(e)=>setLink(e.target.value)}/>
+          onChange={(e)=>setLink(e.target.value)}
+          required/>
           
         </div>
         <div className="form-group">
