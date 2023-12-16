@@ -41,7 +41,7 @@ app.get('/' , (req , res)=>{
  })
 app.use(cors(
    {
-    origin:["http://localhost:3001"]
+    origin:["https://songapp-ten.vercel.app"]
 }
 ))
 //
