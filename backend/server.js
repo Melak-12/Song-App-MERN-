@@ -36,15 +36,11 @@ else{
 //try to accept client on other
 app.get('/' , (req , res)=>{
     
-    res.send('welcome to song app  :)')
+    res.send('welcome to songs app  :)')
  
  })
-app.use(cors(
-   {
-    origin:["https://songapp-ten.vercel.app"]
-}
-))
-//
+
+app.use(cors({ origin:'https://songapp-ten.vercel.app' }));
 
 
 console.log("ready for frontend")
